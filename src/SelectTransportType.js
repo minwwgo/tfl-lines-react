@@ -27,12 +27,12 @@ function SelectTransportType({selectedMode}){
 return (
   <div>
     <div className="form-group">
-        <label htmlFor="exampleFormControlSelect1"> select line type </label>
+        
         <select 
         onChange={handlerSelectedMode}
         className="form-control" 
         id="exampleFormControlSelect1">
-            <option>Choose a Mode of Transport</option>
+            <option>Choose route of Transport</option>
           {transportType.map((chooseTransport) => (
             <option key={chooseTransport.id}>{chooseTransport.name}</option>
           ))}

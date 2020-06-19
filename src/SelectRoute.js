@@ -24,8 +24,8 @@ function SelectRoute({ selectedTransport, selectedMode }) {
         </div>
         <svg
           className="bi bi-arrow-right-circle"
-          width="1em"
-          height="1em"
+          width="2em"
+          height="2em"
           viewBox="0 0 16 16"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"

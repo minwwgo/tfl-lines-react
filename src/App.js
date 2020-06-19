@@ -25,6 +25,7 @@ function App() {
   }
   return (
     <div className="App">
+    <h1> Transport For London Line Information</h1>
     <div>
       
       <img 
@@ -36,12 +37,12 @@ function App() {
     </div>
       
       <div className="form-group">
-        <label htmlFor="exampleFormControlSelect1"> select transport type </label>
+        
         <select 
         onChange={handlerSelectedMode}
         className="form-control" 
         id="exampleFormControlSelect1">
-            <option>Choose a Mode of Transport</option>
+            <option>Choose Type of Transport</option>
           {data.map((eachTransport,index) => (
             <option 
             
