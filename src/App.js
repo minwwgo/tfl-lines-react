@@ -25,18 +25,18 @@ function App() {
   }
   return (
     <div className="App">
-    <h1> Transport For London Line Information</h1>
+    <h1 className="text-center bg-primary text-white"> Transport For London Line Information</h1>
     <div>
       
       <img 
       src={tflImg} 
-      className="img-fluid  mx-auto d-block" 
+      className="img-fluid  mx-auto d-block mb-2" 
       alt="tfl"/>
 
       
     </div>
       
-      <div className="form-group">
+      <div className="form-group m-5 p-5 ">
         
         <select 
         onChange={handlerSelectedMode}
@@ -49,10 +49,11 @@ function App() {
             key={index}>{eachTransport.modeName}</option>
           ))}
         </select>
+        <SelectTransportType selectedMode={selectedMode} />
       </div>
       {/* {selectedMode && <h2>your selected mode : {selectedMode}</h2>} */}
 
-      <SelectTransportType selectedMode={selectedMode} />
+      
     </div>
   );
 }
