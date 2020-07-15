@@ -7,20 +7,26 @@ function App() {
   const [data, setData] = useState([]);
   const[selectedMode,setSelectedMode]=useState(null)
   const [error, setError] = useState(null);
+  
   useEffect(() => {
-    fetch("https://api.tfl.gov.uk/Line/Meta/Modes")
+    fetch("https://api.tfl.gov.uk/Line/Meta/Modes/")
       .then((res) => res.json())
       .then((data) => setData(data))
-      .catch((err) => setError(err));
+      .catch((err) => 
+        setError(err)
+        
+      );
   }, []);
+  
   if (error) {
     return <div> something wrong {error.message}</div>;
   } else if (!data) {
     return <div> "Loading..." </div>;
   }
 
+
   function handlerSelectedMode(e){
-    setSelectedMode(e.target.selectedIndex===0 ? null:e.target.value)
+    setSelectedMode(e.target.selectedIndex ===0 ? null:e.target.value)
 
   }
   return (

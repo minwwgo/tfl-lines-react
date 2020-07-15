@@ -5,6 +5,7 @@ function SelectRoute({ selectedTransport, selectedMode }) {
 
   useEffect(() => {
     if (selectedTransport) {
+      
       fetch(`https://api.tfl.gov.uk/Line/${selectedTransport}/Route`)
         .then((res) => res.json())
         .then((data) => setSelectedRoute(data));

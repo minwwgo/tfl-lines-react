@@ -2,12 +2,16 @@ import React,{useState,useEffect}from 'react'
 import SelectRoute from './SelectRoute'
 
 function SelectTransportType({selectedMode}){
+
   const [transportType,setTransportType]=useState([])
+
   const[selectedTransport,setSelectedTransport]=useState("")
+
   const [error, setError] = useState(null);
   
   useEffect(()=>{
     if(selectedMode){
+      
       fetch(`https://api.tfl.gov.uk/Line/Mode/${selectedMode}`)
     .then(res=>res.json())
     .then(data=>setTransportType(data))
